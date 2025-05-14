@@ -1,0 +1,665 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Completed Projects - Colten Palkon</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  background-color: #007acc;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #007acc;
+  padding: 0.5rem;
+  list-style: none;
+  top: 2.5rem;
+  left: 0;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+
+#project-gallery {
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin: 0.5rem auto;
+  text-align: left; /* Ensure bullets are left-aligned */
+  max-width: 1200px;  /* Optional: keeps list from stretching too wide */
+}
+#toc {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+#toc li {
+  margin-bottom: 0.5rem;
+}
+
+#toc a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#toc a:hover {
+  text-decoration: underline;
+}
+
+
+
+.project {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 600px; /* You can adjust this as needed */
+  box-sizing: border-box;
+}
+
+.project h2 {
+  margin-top: 0;
+  color: #007acc;
+}
+
+.project img {
+  max-width: 95%;
+  height: auto;
+    max-height: 700px; 
+  margin-bottom: 0.5rem;
+}
+
+.project iframe {
+  width: 70%;
+  height: 600px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.project a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #007acc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+  background-color: #007acc;
+  border-radius: 6px;
+  text-decoration: underline;
+}
+
+footer a:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.8);
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+     
+      <li><a href="completed-projects.html">Completed Projects</a></li>  
+       <li><a href="index.html#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Completed Projects</h1>
+  </header>
+<section id="toc-container">
+  <h2>Table of Contents</h2>
+  <ul id="toc">
+
+       <li><strong> Biomedical Instrumentation Engineering Internship</strong>
+      <ul>
+        <li><a href="#compbmedInternship">Summary of Internship 1</a></li>
+        <li><a href="#project-biomed-1">3D Printed Array Baseplate</a></li>
+      
+      </ul>
+    </li>
+    <li><strong> Operations Engineering Internship</strong>
+      <ul>
+        <li><a href="#comautoInternship">Summary of Internship 2</a></li>
+        <li><a href="#project-biomed-2">Automation Projects</a></li>
+         <li><a href="#project-biomed-5">Torque Tester Upgrade</a></li>
+      </ul>
+    </li>
+
+ 
+
+    <li><strong>Electro Mechanical Technician Apprenticeship</strong>
+      <ul>
+        <li><a href="#project-apprentice-1">Motor Control Panel Build</a></li>
+        <li><a href="#project-apprentice-2">Factory Line Troubleshooting</a></li>
+      </ul>
+    </li>
+
+    <li><strong>Engineering School Projects</strong>
+      <ul>
+        <li><a href="#coursesummary">Summary of Impactful Courses</a></li>
+        <li><a href="#project-school-1">ER-SEE-P Ultrasound Duodenoscope Senior Design Capstone</a></li>
+        <li><a href="#project-school-2">Lactate Sensor</a></li>
+         <li><a href="#project-school-3">Stair Chair</a></li>
+         <li><a href="#project-school-4">RFID Blood Loss Monitor</a></li>
+         <li><a href="#project-school-5">Decentralized Review System</a></li>
+      </ul>
+    </li>
+
+    <li><strong>Personal Projects</strong>
+      <ul>
+         <li><a href="index.html">Portfolio Website</a></li>
+        <li><a href="#project-personal-1">Eagle Scout Benches</a></li>
+         <li><a href="#project-personal-4">Solidworks Projects</a></li>
+        <li><a href="#project-personal-3">Boat Projects</a></li>
+        <li><a href="#project-personal-5">Robotics</a></li>
+       
+      </ul>
+    </li>
+
+  </ul>
+</section>
+
+    <!-- Project 1 -->
+      <div class="project" id="compbmedInternship">
+      <h2>Summary of Biomedical Engineering Intern Accomplishments</h2>
+        <ul class="bullet-list">
+           <li>3d printing and part fabrication </li>
+  <li>Engineering Change Orders</li>
+  <li>Creating Bills of Materials</li>
+  <li>Inventory management and cost analysis</li>
+            <li>Coordinated CNC mechine fabrication for urgently needed parts</li>
+           <li>Conducting Quality Inspections on MRB which were defective parts and determining cause and if they can be fixed or scrapped and if it will affect other incoming parts</li>
+           <li>Servicing GloMax Multimode Microplate Readers with focus on Luminescence, fluorescence, UV-visible absorbance, BRET and FRET detection</li>
+           <li>Utilizing SAP for inventory management</li>
+           <li>Regulatory impact and RoHS compliance Checks</li>
+           <li>Testing procedures of instruments to make sure they are working properly before being sent out</li>
+           <li>AutoCAD drawing analysis and construction to make sure tolerances were adequate</li>
+          
+           <li>Packaging testing</li>
+           <li>Lab simulation verification testing</li>
+           <li>Contacting suppliers with inventory issues</li>
+           <li>Vertically Managed Inventory or VMI inventory setup</li>
+         
+           <li>Shipping Preparation</li>
+</ul>
+ </div>
+   </div>
+    <!-- Project 1 -->
+    <div class="project" id="project-biomed-1">
+      <h2>3D Printed Array Baseplate</h2>
+      <p>Reverse Engineered and 3D printed an array baseplate that had a 70% increase in rigidity to improve accuracy of the Capilarry Electrophoresis system.</p>
+      <img src="3dbend.JPG" alt="3D print comparison">
+     
+      <p><a href="3d print.pptx" target="_blank"> View Comparizon powerpoint(pptx)</a></p>
+    </div>
+      
+    </div>
+  <div class="project" id="comautoInternship">
+      <h2>Summary of Operations Intern Accomplishments</h2>
+    
+        <ul class="bullet-list">
+          
+            <li>Printer project</li>
+          <ul>
+        
+           <li>Goal:  Get printer to fold and staple sheets so they fit in box.</li>
+              <li>Called printing companies and discovered a new finisher can be added.</li>
+              <li>Set up demo with salesman to make sure it does job.</li>
+              <li>Followed up to make purchase order.</li>
+              <li>Print finisher got purchased and installed, and I determined small booklets would be easiest.</li>
+           <li>Talked with head of quality to get change approved.</li>
+           <li>Made a new kit packaging diagram picture with new book</li>
+           <li> Implemented change and taught operators print settings.</li>
+           <li>Saved $10,000 per year after initial investment on labor and print supplies</li>
+          </ul>
+               <li>Boxfold Project</li>
+          <ul>
+        
+           <li>Goal: Get boxes to be easily made/eliminate need for folder.</li>
+              <li>Talked with packaging engineers to discuss better design.</li>
+              <li>Decided to have supplier fold boxes beforehand, so all we need to do is break them off by perforated edges.</li>
+              <li>Talked with box folding machine salesman about other boxes and set up a visit to work with mill.</li>
+              <li>Get a 4-side fold model if wanted to do more models.</li>
+           <li> Ran a cost analysis if worth it (labor time, other things to take into account and determined it was not the time to purchase.</li>
+         
+          </ul>
+           <li>Torque Scale Project</li>
+          <ul>
+        
+           <li>Goal: Find new torque scales for bottles because Torque scale is outdated and requires multiple adapters. </li>
+              <li>Looked at current company and it is still old, so looked for new company online.</li>
+              <li>Found one with USB and wireless capabilities.</li>
+              <li>Purchased both Torbal (online one) and Sure Torque; a brand previously used. Sure Torque was a better option to connect to software and more features.</li>
+              <li> Reverse engineered and developed a way to attach quick clamp system from old torque scales to new scales with no loss in accuracy. </li>
+          </ul>
+         <li>Tamper Seal Applicator Project</li>
+          <ul>
+        
+           <li>Problem: Boxes were getting stuck and seals were being applied in wrong locations.</li>
+              <li>Created an adjustment system so seals would be applied correctly no matter box type</li>
+              <li>Developed a flexible applicator which minimized box injury as well as seal unadhesion</li>
+              <li>Problem 2: Operators would ocassionally place boxes in wrong orientation</li>
+              <li> Solution: implemented a color sensor to detect box orientation by picking up on specific logo signitures.</li>
+            <li>Fine tuned sensor to detect the wrong orientation no matter speed or box type</li>
+          </ul>
+
+           <li>Robotic Palletizer Project</li>
+          <ul>
+        
+           <li>Goal: Increase automation between tamper seal application to palletization of boxes. </li>
+              <li>Contacted palletizer salesman to demonstrate capabilities of product</li>
+              <li>Found workers oppinions to see if they would be in favor of the new automation or not</li>
+              <li>Performed a cost analysis after recieving quote from salesman to see if expenditure would be worth it.</li>
+              <li> Determined the robotic palletizer would be too slow and not worth the money with current market.</li>
+            <li>Looked into alternative palletizing options such has sliding palletizers with cameras, but those were too expensive</li>
+          </ul>
+             <li>Transfer Pump Project</li>
+          <ul>
+        
+           <li>Goal: Learn how transfer pumps work and aid in instillation </li>
+              <li>Listened to the initial proposal about logistics, Reasons factored, timeline, most important features in design, contamination level, and gave ideas when the time came.</li>
+            
+          </ul>
+            <li>Crimping Line Planning</li>
+          <ul>
+        
+           <li>Goal: Observe and help with the planning of a new bottle cap crimping automation line. </li>
+              <li>Talked with engineers about installation, paperwork, and came up with test run procedure.</li>
+            
+          </ul>
+           <li>UV sensor Installation</li>
+          <ul>
+        
+           <li>Goal: Determine how to stop Label detection failure if bottles were spun. </li>
+              <li>Called up SICK UV sensor company and made decision that 2 sensors would be needed.</li>
+            <li>Fabricated a mounting bracket and used spare sensor to get production line in working order</li>
+            <li>Worked with automation engineers to modify PLC programing and complete engineering change control.</li>
+          </ul>
+            <li>Ethylene oxide Hopper Project</li>
+          <ul>
+        
+           <li>Goal: Develope a way to count small cartridges that are take out of a big bag and put into a smaller bag with different quantity. </li>
+              <li>Called distributor to see if they could just send big bag at small quantities and they could at a higher cost</li>
+            <li>Came up with ideas of conveyor system with elevator after hopper design failed by talking with contractor about available options to incorporate counting scale.</li>
+            
+          </ul>
+              <li>Peristaltic Pump Project</li>
+          <ul>
+        
+           <li>Problem:  A communication error keeps occurring between the control panel and the pumps. It causes them to inject too much liquid and not stop. The emergency shutoff doesn't work as the pumps have their own "brain".</li>
+              <li> Set up meeting with local pump distributor to send an engineer to talk/try to fix our pumps.</li>
+            <li>Found new pump alternatives to replace old pumps and created a cost break down analysis to determine if buying new pumps made sense based on failure rate of old pummps.</li>
+            </ul>
+           </div>
+   </div>
+
+     <!-- Project 2 -->
+ <div class="project" id="project-biomed-2">
+      <h2>Automation Project 1 UV Sensor Addition</h2>
+      <p>Fabricated a mounting bracket, ran wiring, and programmed PLC where UV sensor could detect UV coated labels on bottles and developed reject logic between sensors so if one or both detects a label, bottle may pass, but if neither do bottle is rejected.</p>
+      <img src="UVautomationline.jpg" alt="Sensor Instalation Picture">
+     <img src="plcwiring.jpg" alt="Associated PLC wiring">
+     
+    </div>
+         <!-- Project 3-->
+ <div class="project" id="project-biomed-3">
+      <h2>Automation Project 2 AI camera and Color Sensor</h2>
+      <p>First an AI camera was tested to detect markings and blemishes on boxes and the correct orientation before being placed through a tamper evident sealer Applicator machine. Next it was determined due to one particular orientation marking that a cheaper color sensor could suffice for the orientation check. It was then purchased, mounted, calibrated, and programed into the existing PLC with a stop feature when the incorrect orientation was detected. </p>
+      <img src="aicamera.jpg" alt="AI camera Testing">
+    <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/colorsmall.mp4" type="video/mp4">
+        </video>
+    
+    </div>
+      <!-- Project 4-->
+ <div class="project" id="project-biomed-4">
+      <h2>Automation Project 3 Tamper seal Applicator</h2>
+      <p>The tamper seal automation machine kept malfuntioning and would either damage boxes if its ridgid applicator bar was too snug, or not perform any seal at all if too loose. So I custom made a flexible applicator bar that reduced the incident rate to 1 out of every 1000 seals vs the 1 out of every 10 that was occuring before the addition.  </p>
+
+  
+   <img src="flexiblesealapplicator.jpg" alt="Flexible tamper seal Applicator">
+    <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/20231218_211530000_iOS%20-%20Trim.mp4" type="video/mp4">
+        </video>
+    
+    </div> 
+    <!-- Project 5-->
+ <div class="project" id="project-biomed-5">
+      <h2>Torque Tester Upgrade and Refitment</h2>
+      <p>The old torque testers required very old connecting cables that were getting increasingly difficult to aquire and use. So I went about finding new torque testers to purchase. When the new ones came in, they did not have the same quick clamp system that the old ones had that the operators had grown to love. So I came up with a way to refit the quick clamp portion of the old testers onto the new testers without affecting accuracy. </p>
+      <img src="torquer.JPG" alt="Torque Testing jig">
+   <img src="torquenvo.jpg" alt="torque old v new">
+    <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/torquevid.mp4" type="video/mp4">
+        </video>
+    </div> 
+     </div>
+     <div class="project" id="coursesummary">
+      <h2>Summary of Completed Project Courses</h2>
+     
+        <ul class="bullet-list">
+          
+            <li>Computing for Engineers</li>
+          <ul>
+        
+           <li>Matlab programming</li>
+            </ul>
+          <li>Introduction to Computing</li>
+          <ul>
+        
+           <li>C and C++ programming</li>
+            </ul>
+           <li>Introduction to Biomedical Engineering</li>
+          <ul>
+        
+           <li>Foundational principals including Design project research, solution sketches, prototyping, and verification and validation testing</li>
+            <li>My project focus for this course was developing an improved urine cup. We targeted a user of pregnent mothers, and the elderly as they have the most difficult time with the procedure. </li>
+        <p><a href="BME 2110 Presentation.pdf" target="_blank">BMED 2110 ICD Project (PDF)</a></p>
+   
+          </ul>
+          <li>Problems in Biomedical Engineering</li>
+          <ul>
+        
+           <li>The focus of this course was to determine what was causing maternal mortality to be high in Georgia and develope a solution to fix the issue. </li>
+        <li>This course was a semester long group project where my group determined that unchecked bleeding post giving birth was one of the major causes of maternal mortality. </li>
+         
+            <li>We developed a maternal diper fitted with an RFID sensor that was able to detect amounnt of blood loss based on signal strength. We then used models based on amount of blood lost over time to create a bleeding rate model that could predict if a mother was going to have a high chance of going in the danger zone. It would then alert the mother to go to the hospital. </li>
+          <p><a href="2250 Presentation 2.pdf" target="_blank">BMED 2250 RFID Liquid Sensor(PDF)</a></p>
+          </ul>
+                  <li>Introduction to Biomedical Engineering Design</li>
+          <ul>
+        
+           <li>Completed a course on Medical Device Design, focusing on identifying real-world clinical needs and designing innovative solutions. Gained hands-on experience in prototyping, user research, and iterative development, collaborating with clinicians and stakeholders to refine product concepts.</li>
+        <li>My project involved redesigning a stair chair which are basically wheel chairs designed to go up and down stairs in emergency situations</li>
+          <li>We took an existing design, fabricated new and improved handle design, restraint system, and much more to improve both the saftey and efficiency of the device. </li>
+          <p><a href="2310rep.pdf" target="_blank">Stair Chair Design History File(PDF)</a></p>
+          </ul>
+         
+              
+              <li>Systems Physiology</li>
+              <ul>
+              <li>Completed an intensive course in human physiology from a biomedical engineering perspective, focusing on how organ systems function and respond to disease and injury. Gained experience analyzing physiological data, modeling biological systems, and applying engineering principles to understand medical technologies and interventions.</li>
+              
+                <li> I used Weekly case studys based off of real medical events and had to determine what caused the medical issues based on given medical data, I then calculated and used reason to determine what was occuring in the patient and came up with solutions that would help the situation.</li>
+              </ul>
+          
+                <li>Quantitative Engineering Physiology Lab 1</li>
+          <ul>
+           <li>BMED 3110 is a hands-on biomedical engineering course where students design and conduct experiments on human participants, developing skills in bioinstrumentation, data analysis, and collaboration within diverse teams. The course emphasizes entrepreneurial thinking, creativity, and the practical application of scientific literature to solve real-world medical challenges.</li>
+           <li> My project focused on people who have had knee surgery and we went about determining how it effects the muscles around the knee years after surgery. We compared good knees to bad knees and tested force as well as electrical ouputs from the muscles. </li>
+            <p><a href="Buzz_Drivers_Final_Report.pdf" target="_blank">Knee injury's Affect on Muscle(PDF)</a></p>
+             
+          </ul>
+          <li>Biotransport</li>
+         <ul>
+       <li>In BMED 3310, I learned the fundamentals of momentum, heat, and mass transport and how these principles apply to biomedical engineering problems. Through lectures, problem-solving studios, and practical exercises, I gained the ability to formulate and solve differential equations related to fluid flow, and heat and mass transfer in biomedical contexts, such as designing hemodialysis machines and drug delivery systems.</li>
+       </ul>
+       <li>Biomedical Systems and Modeling</li>
+             <ul>
+       <li>In BMED 3520, I learned the fundamentals of computational systems biology, focusing on biomathematical modeling techniques, including static and dynamic models, parameter estimation, and systems analysis methods. Through lectures, problem-solving sessions, and hands-on projects, I developed skills to design and implement quantitative models for biomedical applications, applying these techniques to real-world scenarios in areas such as metabolic systems, gene networks, and personalized medicine.</li>
+       <li>This course involved modeling the way the world interacts through the use of differential equations. From modeling how wolves introduced to an enviroment will effect the bends in the river, to the exponential growth rates of bacteria populations, this course gave the skill sto model it all. </li>
+          </ul>
+               <li>Biomechanics</li>
+          <ul>
+        
+           <li> Biomechanics, focused on key principles like statics, axial loading, torsion, bending, and dynamics, with applications in biomedical engineering. I gained practical experience solving problems related to material deformation and dynamics, and developed skills in modeling, stress analysis, and understanding the motion of objects in biomedical contexts.</li>
+               </ul>
+            <li>Physiology of Cellular and Molecular Systems</li>
+        <ul>
+              <li>In BMED 3600, I developed a strong foundation in cellular and molecular biology, focusing on gene expression, cell signaling, and the cell life cycle. I applied this knowledge to design a gene or stem cell therapy for disease treatment, demonstrating problem-solving and research skills essential for real-world biomedical challenges.</li>
+              <li>One project focused on gene expression and worked on projects by modeling Fruit Fly Genotypes and Phenotypes, while another on stem cells.</li>
+            <p><a href="Fly.pdf" target="_blank">Genomic Fly Experiment(PDF)</a></p>
+        </ul>
+          <li>Quantitative Physiology Lab 2</li>
+           <ul>
+           <li> In BMED 3610, I applied engineering principles to experimental physiology, designing and conducting lab experiments with a focus on quantitative data analysis and critical evaluation of results. I developed skills in teamwork, data interpretation, and communication, culminating in a team-based research proposal and a final poster presentation.</li>
+           <li>My project focused on the DU-145 Cell line and testing betaine and cisplatin treatments in combination to see if there was a synergistic effect. We tested DNA Damage and Oxidative stress through flow cytometry, as well as Cell death with CCK-8 Assays.</li>
+          <p><a href="DU145.pdf" target="_blank">Cisplatin and Betain Cancer Report(PDF)</a></p>
+           </ul>
+           <li>Capstone Design</li>
+          <ul>
+        
+           <li>In BMED 4602, I collaborated with a biomedical engineering team to develop a design solution for a real-world healthcare problem, including conducting literature reviews, defining functional requirements, and creating prototypes. The project culminated in a presentation at the Ga Tech Capstone Expo, where we showcased our final design, report, and prototype to industry professionals.</li>
+              <li>My project focused on creating an ERCP ultrasound attachment to navigate to the papilla of Vater and cause less damage to sourounding tissue. Ultrasound simulations as well as a endoscope and life size prototype was used that demonstrated both power and unhindered manuverable capabilitys. </li>
+                <p><a href="ER-SEE-P_FinalReport_4602_Fall 2024.pdf" target="_blank">Download Capstone Paper (PDF)</a></p>
+          </ul>
+            <li>Instruments and Electronics Lab</li>
+              <ul>
+       <li>In ELE 210 – Engineering Circuit Analysis, I gained a deep understanding of circuit analysis techniques including Ohm’s law, Kirchhoff’s laws, Thévenin and Norton theorems, and AC steady-state analysis. I developed the ability to analyze and solve complex electrical circuits using both manual methods and circuit simulation software, preparing me for more advanced electrical engineering challenges.</li>
+              <li> The lab consisted of creating circuits to perform certain tasks such as play mary had a little lamb using only op amps and basic circuit components. I also got familira with using all the comon elements of a circuits lab such as oscilloscopes, power generators and much more. </li>
+          </ul>
+         <li>Sensors and Instrumentation</li>
+          <ul>
+        
+           <li>In this course, I designed and implemented biomedical sensing and instrumentation systems, applying principles of electronic circuit design, signal processing, and sensor technology. I also completed a team-based project, presenting and documenting the design process and outcomes in a final report and presentation.</li>
+              <li>My project was creating a sensor from scratch that could detect lactate concentrations. We were using this to detect lactate in sweat samples so a runner could know how much lactic acid that have created. This was a continuous lactate monitor. </li>
+              <li>We were able to get a working prototype that utilized lactate oxidase and circuits to measure the current output that the lactate oxidase made when reacting with lactate. Through our circuits trans impediance amplifier we were able to make it into measureable voltage changes that we then made a graph from that would be a baseline for lactic acid production.</li>
+             <p><a href="lactate.pdf" target="_blank"> Lactate Sensor (PDF)</a></p>
+          </ul>
+            <li>Translational Microsystems</li>
+        <ul>
+              <li> The process of creating microsystems and learning about the current capabilities of modern technology was the focus. This background was then enhanced by analyzing cutting edge research papers and presenting good summaries of the background, significance, innovation, and results to other academics who were not familiar with the specifics.</li>
+            <li>I focused my research projects on Kirigami stent systems, Biohybrid swimming microsystem to model sperm, and how extracellular fluid viscosity enhances cell migration and cancer dissemination </li>
+          <p><a href="transmicro.pdf" target="_blank"> Summary of Microsystem Reports(PDF)</a></p>
+        </ul>
+
+           <li>Regulatory and Quality Issues for Medical Devices</li>
+          <ul>
+        
+           <li>Completed an intensive project-based course on regulatory and quality systems in medical device development, focusing on FDA and EU MDR frameworks. Gained hands-on experience creating a complete Design History File (DHF), conducting risk analysis, and presenting regulatory strategy through multiple design reviews for a chosen medical device.</li>
+              <li>My project was a class 3 medical device called teh s-ICD like my previous work on regular ICD's this is also a used to get the heart back on rhythm, but the subcutaneous part about it means that no leads are directly inserted into the ventricals or atriums. Instead it is placed near the heart and shocks the whole thing. For this reason higher energy shocks are used and it was interesting going through the regulatory side of what keeps they type 3 medical device complient and what processes were needed to get it aproved by the FDA. </li>
+              <p><a href="regreport.pdf" target="_blank"> S-ICD Regulations Report(PDF)</a></p>
+          </ul>
+
+            <li>Certificate in Finance</li>
+         <ul>
+               
+       <li>Courses such as Finance and Investments, Financial Markets Trading and structure, Entrepreneurial Finance, Financeial Aspects of Comercial Real Estate, and Fin Tech and Crypto Tokens were taken. </li>
+              <li> The two that ended up being the most intresting were the real estate course where we did case study on a recently finished life science building in science square. We did the underwriting as if we were to start the project a few years later, and perfomed all of the tasks that a real estate perfessional would need to do to get the finances and project up and running. </li>
+            <li>The other course was the Fin Tech and Crypto course where I learned about decentralized systems and how it is being utilized in the financial system. I build my own DAP for a decentralized review system.</li>
+           <p><a href="scisq.pdf" target="_blank"> Life Sciences Real Estate (PDF)</a></p>
+         </ul>
+            </div>
+ </div>
+      <!-- Project 6 -->
+    <div class="project" id="project-school-1">
+      <h2>Senior Capstone: ERCP Duodenoscope Design</h2>
+      <p>This project focused on redesigning the ERCP duodenoscope to improve sterilization and usability for endoscopic procedures.</p>
+      <img src="capstoneposter.jpg" alt="Capstone Poster">
+      <img src="ERCPoster.JPG" alt="Project Screenshot">
+       <img src="modelbile.jpg" alt="model bile duct">
+      <img src="ERseepportotype.jpg" alt="Prototype duodenoscope">
+     <iframe width="75%" height="600" src="https://www.youtube.com/embed/CmgH1nm-GMo?si=Hi_Q9_iOHDTRc7dl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/ER-See-Ptrim1.mp4" type="video/mp4">
+        </video>
+      <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/ER-See-Ptrim2.mp4" type="video/mp4">
+        </video>
+    
+      <p><a href="ER-SEE-P_FinalReport_4602_Fall 2024.pdf" target="_blank">Download Capstone Paper (PDF)</a></p>
+    </div>
+         <!-- Project 7 -->
+    <div class="project" id="project-school-2">
+      <h2>Lactate Sensor </h2>
+      <p>In this project I made a working lactate sensor with the end goal of developing a continuous lactate monitor so athletes can track how much lactic acid they produce. We were able to use sensor principles to create a circuit that converted the current produced from lactate oxidase reacting with lactate similar to glucose oxidase in glucose sensors. We then used our circuit with a potentiostat and transimpedance amplifier to make a measurable voltage that varied with the amount of lactate that was added to the system. We then made a lactate calibration curve that represented how much voltage gets produced depending on the lactate concentration in the sweat.</p>
+      <img src="lactateproj.JPG" alt="Lactate sensor">
+            <img src="lactcali.JPG" alt="Lactate sensor calibration curve">
+        <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/3dlac1.mp4" type="video/mp4">
+        </video>
+      <p><a href="lactate.pdf" target="_blank"> Lactate Sensor (PDF)</a></p>
+    </div>
+         <!-- Project 8 -->
+    <div class="project" id="project-school-3">
+      <h2>Improved Stair Chair</h2>
+      <p>This project involved modifying a stair chair with additional components including breaking wheels, restraint system, extendable handles</p>
+      <img src="stairupg.JPG" alt="Stair Chair Upgrade">
+     
+      <p><a href="stairpres.pdf" target="_blank"> Stair Chair Upgrades Presentation (PDF)</a></p>
+    </div>
+       <!-- Project 9 -->
+    <div class="project" id="project-school-4">
+      <h2>RFID Blood Loss Sensor</h2>
+      <p>This project was meant to notify mothers when they loose too much blood shortly after pregnancy. It involves a standard maternal diper with a RFID tab inserted in the diper that could detect the capacity and track how much blood is lost by the mother and notify her if it is reaching dangerous levels. Using a signal strength the RFID was able to differentiate between full empty and half full diapers. This would allow with a Reader placeed near by, consistent checks on if the mother is logging too much blood loss. </p>
+      <img src="moistrusensing.jpg" alt="Moisture sensor">
+      <img src="rfiddip.jpg" alt="RFID in diaper">
+  
+      <p><a href="2250 Presentation 3.pdf" target="_blank"> Blood Loss Sensor Presentation(PDF)</a></p>
+      <p><a href="diprep.pdf" target="_blank"> Blood Loss Sensor Report(PDF)</a></p>
+        
+    </div>
+  </div>>
+    <!-- Project 10 -->
+    <div class="project" id="project-school-5">
+      <h2>Decentralized Review system</h2>
+      <p>I developed a decentralized reveiew system using a mix of backend solidity code on the Etherium Sepolia test net and a front end UI with java script and json proceses. The review systems advantage over normal system is reviewers logs are kept and people can see who made the reviews and what they have made in the past. It also allows people searching for locations to filter based on the type of location and the system gives the location with the review sliders they chose based on ranked choice priority. It does this all while storing the reviews onto the blockchain. </p>
+      <img src="decentralizedreview.JPG" alt="Review system thumbnail">
+       <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/dap2.mp4" type="video/mp4">
+        </video>
+    </div>
+   </div>
+             <div class="project" id="project-personal-1">
+        <h2>Eagle Scout Benches</h2>
+      <p>With my troops help I followed schematics for folding benches that when 2 are combined create a flt table.  </p>
+      <img src="20200218_000405955_iOS.jpg" alt="3D printing">
+      <img src="20200218_020037277_iOS.jpg" alt="3D printing">
+      <img src="20200405_181054920_iOS.jpg" alt="3D printing">
+                  <div class="project" id="project-personal-4">
+        <h2>3D printing and and Reverse Engineering projects</h2>
+    
+      <img src="3dprint collage.JPG" alt="3D printing">
+      <img src="3dbend.JPG" alt="3D printing">
+      <img src="batteryunsq.JPG" alt="3D printing">
+       <video width="90%" height="600" controls muted autoplay loop>
+          <source src="https://github.com/coltenp28/coltenp28.github.io/raw/refs/heads/main/SYRINGE.mp4" type="video/mp4">
+        </video>
+      </div>
+               
+                 </div>
+             <div class="project" id="project-personal-3">
+        <h2>Boat Projects</h2>
+      <p>Rebuilding a 75 year old jon boat and adding modern electronics</p>
+      <img src="rig.jpg" alt="boat">
+      <img src="rigwater.jpg" alt="boat2">
+      <img src="transom.jpg" alt="boat3">
+               <img src="20180613_222352639_iOS.jpg" alt="3D printing">
+    </div>
+        <div class="project" id="project-personal-5">
+        <h2>Robotic Engineering Projects</h2>
+      <p>Robotic products ranging from ultrasonic cars, windmills, bridges, to automatic goal detectors</p>
+      <img src="20210224_165021373_iOS.jpg" alt="robo2">
+      <img src="20210107_161206213_iOS.jpg" alt="re2">
+      <img src="20201029_170957000_iOS.png" alt="bre3">
+          <img src="forcegage.jpg" alt="bre3">
+          <img src="20201005_154743084_iOS.jpg" alt="bre3">
+          <img src="20201029_170957000_iOS.png" alt="bre3">
+          <img src="kneepost.jpg" alt="Knee injury Poster">
+    </div>
+      
+      </div>
+  </section>
+
+  <footer>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/biomedicalcoltenpal" target="_blank">LinkedIn</a> | Email: <a href="mailto:coltenpalkon@gmail.com">coltenpalkon@gmail.com</a></p>
+ <p><a href="ColtenPalkonResume.pdf" target="_blank">Download My Resume</a></p>
+</footer>
+</body>
+</html>

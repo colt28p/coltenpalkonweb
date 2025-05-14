@@ -1,0 +1,176 @@
+<!-- UPDATED about.html --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Colten Palkon</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #007acc;
+      padding: 1rem;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #007acc;
+      padding: 0.5rem;
+      list-style: none;
+      top: 2.5rem;
+      left: 0;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      margin: 0.5rem 0;
+    }
+
+    main {
+      width: 95%;
+      max-width: 1600px;
+      padding: 2rem;
+      background-color: white;
+      margin-top: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .profile-photo {
+      float: left;
+      margin-right: 2rem;
+      width: 600px;
+      max-width: 40%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-text {
+      overflow: hidden;
+    }
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem; /* spacing between images */
+  flex-wrap: wrap; /* wrap to next line on small screens */
+  margin: 1rem 0;
+}
+
+.image-row img {
+  flex: 1 1 30%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+ footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+ 
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      margin-top: 3rem;
+    }
+
+  footer a {
+  color: #007acc;  /* Bright blue for visibility */
+  text-decoration: none;
+  font-size: 1.2rem;  /* Slightly larger text */
+  font-weight: bold;  /* Make links stand out more */
+  padding: 0.3rem 0.6rem;  /* Adds padding around the links */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+footer a:hover {
+  color: #ffffff;  /* White color on hover for contrast */
+  background-color: #007acc;  /* Blue background on hover */
+  border-radius: 6px;  /* Rounded corners for the background */
+  text-decoration: underline;  /* Underline on hover */
+}
+
+footer a:focus {
+  outline: none;  /* Remove default outline */
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.8);  /* Blue glow on focus */
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="completed-projects.html">Completed Projects</a></li>
+      <li><a href="index.html#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <img src="profile.jpg" alt="Colten Palkon" class="profile-photo">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Colten Palkon, a developer and problem solver passionate about innovation and impactful technology. My focus lies in bridging engineering with real-world healthcare solutions through user-centered design.</p>
+      <p>My background includes hands-on experience with endoscopic tool innovation in my senior capstone, development of web applications, and the integration of IoT in smart systems. Currently, I'm exploring machine learning, blockchain integration, and scalable platforms. My overarching goal is to contribute tools and technologies that improve lives and expand what’s possible in biomedical engineering.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/biomedicalcoltenpal" target="_blank">LinkedIn</a> | Email: <a href="mailto:coltenpalkon@gmail.com">coltenpalkon@gmail.com</a></p>
+    <p><a href="ColtenPalkonResume.pdf" target="_blank">Download My Resume</a></p>
+  </footer>
+</body>
+</html>
