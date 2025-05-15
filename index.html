@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Colten Palkon's Project Portfolio - Colten Palkon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 <link rel="icon" href="cpfavicon.png" type="favicon">
@@ -14,11 +15,53 @@
   scroll-behavior: smooth;
 }
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
       background-color: #f4f4f4;
+    }
+
+    .parallax {
+      height: 600px;
+      background-image: url('kepler.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .parallax-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0.5rem 0;
+    }
+
+    .parallax-subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .parallax-intro-heading {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 1rem 0 1rem;
+    }
+
+    .intro-note {
+      max-width: 800px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 0 auto;
+      text-align: center;
     }
 
     nav {
