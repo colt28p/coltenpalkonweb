@@ -220,7 +220,7 @@
     .project-card img {
       width: 100%;
       height: auto;
-      display: block;
+
     }
 
     .project-content {
@@ -416,18 +416,7 @@ footer a:focus {
 @media (max-width: 768px) {
 
   /* Hamburger icon placement & visibility */
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1100; /* above nav */
-  }
+ 
 
   nav ul {
     display: none;
@@ -468,33 +457,30 @@ footer a:focus {
 
 /* Hide hamburger on large screens */
 /* Hide hamburger on large screens */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
+
 
 
 /* ===== Mobile Navigation Dropdown ===== */
 @media (max-width: 768px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+   nav {
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu-toggle {
-    font-size: 2rem;
-    background: none;
-    border: none;
+  #simpleMenuToggle {
+    background: #007acc;
     color: #fff;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
     cursor: pointer;
-    padding: 0;
-    margin: 0;
-    line-height: 1;
   }
+  
 
   nav ul {
     display: none;          /* Hidden until toggled */
@@ -519,24 +505,25 @@ footer a:focus {
   }
 
   nav ul li a {
-    display: block;
+
     width: 100%;
     padding: 0.75rem 0;
   }
 }
 
-/* Hide menu-toggle on desktop */
+/* Hide Menu button on larger screens */
 @media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
+  #simpleMenuToggle { display: none; }
 }
+
+  
+
 
   </style>
   
 <body>
   <nav>
-     <button id="simpleMenuToggle" style="background:#007acc;color:white;border:none;font-size:1.25rem;padding:0.5rem 1rem;margin:0.5rem auto;display:block;">Menu ⌄</button>
+      <button id="simpleMenuToggle" style="background:#007acc;color:white;border:none;font-size:1.25rem;padding:0.5rem 1rem;margin:0.5rem auto;">Menu ⌄</button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -714,7 +701,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
 }
 
 .slick-slide {
-  display: block !important;
+  !important;
 }
 
 .testimonial-list {
@@ -756,7 +743,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
 
   /* Hamburger icon placement & visibility */
   .menu-toggle {
-    display: block;
+
     position: absolute;
     left: 0.75rem;
     top: 0.75rem;
@@ -856,7 +843,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
   }
 
   nav ul li a {
-    display: block;
+ 
     width: 100%;
     padding: 0.75rem 0;
   }
@@ -963,7 +950,7 @@ function setCarouselHeight() {
   }
 
   .menu-toggle {
-    display: block;
+
     background: none;
     border: none;
     font-size: 2rem;
@@ -1007,7 +994,7 @@ function setCarouselHeight() {
 
   /* Hamburger icon placement & visibility */
   .menu-toggle {
-    display: block;
+
     position: absolute;
     left: 0.75rem;
     top: 0.75rem;
@@ -1107,7 +1094,7 @@ function setCarouselHeight() {
   }
 
   nav ul li a {
-    display: block;
+
     width: 100%;
     padding: 0.75rem 0;
   }
