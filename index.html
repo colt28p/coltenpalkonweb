@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Colten Palkon's Project Portfolio - Colten Palkon</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-<link rel="icon" href="cpfavicon.png" type="favicon">
+ <!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
 <link rel="shortcut icon" href="cpfavicon.png" type="favicon">
 
   <style>
@@ -288,6 +289,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-style: italic;
+  flex: 0 0 300px; /* fixed height, no shrinking */
+  margin-bottom: 10px;
 }
 
 .testimonial-text {
@@ -307,20 +310,22 @@
   color: #777;
 }
 
+
 .testimonial-carousel .testimonial-card {
-  padding: 1.5rem;
+  padding: 1rem;
+   
+height: 350px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
+
+
 
 .testimonial-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .testimonial-list {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(3 * 160px); /* 3 cards */
 }
 
 
@@ -474,10 +479,11 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
 
   <!-- Carousel View -->
   <div class="testimonial-carousel">
+     
     <div class="testimonial-card">
       <p class="testimonial-text">"Colten fearlessly tackled numerous critical projects during his time with Promega. He approached his work with focus, determination, and a genuine desire to contribute. I was impressed with his ability to quickly diagnose an issue, navigate challenges and push through roadblocks to deliver well-thought-out solutions. He worked collaboratively with team members, showing strong communication skills and a clear commitment to improving safety, quality, delivery, and productivity. Colten’s responsiveness and proactive mindset made him a dependable and effective contributor. His professionalism and positive attitude left a strong impression, and I have no doubt he will continue to excel in his career. "</p>
       <p class="testimonial-author">Kevin Schickert, <span class="testimonial-role">Continuous Improvements Project manager Promega Coorporation</span></p>
-    </div>
+    
     </div>
     <div class="testimonial-card">
       <p class="testimonial-text">"As a high school freshman with great hitting mechanics, but who had not yet hit his growth spurt - the coaching staff deemed Colten Palkon the future.  Little did we know that his growth would not simply lead to increased playing time through his high school baseball career, but a pursuit of his dreams and a degree in biomedical engineering from Georgia Tech. Needless to say, "The Future's"  arrived and it is bright. You can't coach tenacity and hard work, but you just hope for it and Colten has it. Continue to swing for the fences, Colten."</p>
@@ -488,6 +494,8 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
       <p class="testimonial-text">"During his time with the Instrumentation Department at the Promega Corporation, Colten consistently demonstrated a high level of professionalism, technical competence, and a strong willingness to learn. Despite the complexity of our electromechanical assemblies, he quickly adapted to our processes and demonstrated keen attention to detail. One of Colten’s standout qualities is his initiative and willingness to find opportunities that add value to a team. He communicated clearly and asked thoughtful questions that reflected both curiosity and critical thinking. In addition to his technical skills, Colten brought a positive and collaborative energy to the team. He worked well with cross-functional groups and showed genuine respect for colleagues across all levels, including assembly personnel, engineers, and management. I am confident that Colten will bring the same level of enthusiasm and diligence to his future endeavors. I highly recommend him for any opportunity that aligns with his career goals and strengths."</p>
       <p class="testimonial-author">Logan Maly, <span class="testimonial-role">Instrumentation Manufacturing Process and Lifecycle Manager Promega Coorporation</span></p>
     </div>
+    
+  
      <div class="testimonial-card">
       <p class="testimonial-text">"Having known Colten for a number of years, I can attest to his outstanding character, leadership, and intellectual prowess.  Colten achieved the prestigious Eagle Scout rank through dedication and commitment to the Scout Oath and Law. His Eagle Scout project demonstrated his ability to plan strategically, rally a team of volunteers, and deliver a project with significant community impact. His leadership in this endeavor, marked by clear communication and problem-solving, exemplify the skills he later applied in academic settings at GT. His ability to tackle complex problems, whether researching possible drug treatments or performing research on the regulatory aspects of medical devices, reflects the analytical rigor and innovative spirit that Georgia Tech fosters. I wholeheartedly recommend Colten Palkon for any opportunities you may have. His technical expertise, grounded in his Georgia Tech education, and his leadership, honed through Scouting, make him an exceptional candidate."</p>
       <p class="testimonial-author">Paul Selman, <span class="testimonial-role">Senior Mechanical Perfessional Engineer, Georgia Tech Alumnus, Class of 1998 </span></p>
@@ -541,30 +549,51 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
  <p><a href="ColtenPalkonResume.pdf" target="_blank">Download My Resume</a></p>
 </footer>
   <!-- Slick carousel JS and CSS for carousel functionality -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<!-- jQuery (MUST be before Slick and your custom script) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 <button id="backToTop" title="Go to top">&#8593;</button>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<style>
+/* Ensure testimonial-carousel does NOT show all items at once */
+.testimonial-carousel {
+  display: none;
+}
+
+.slick-slide {
+  display: block !important;
+}
+
+.testimonial-list {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+</style>
+
 
 <script>
 $(document).ready(function(){
-  // Initialize slick carousel
   $('.testimonial-carousel').slick({
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 30000,
     dots: true,
+    arrows: false,
     infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
+    adaptiveHeight: true
   });
 
-  // Toggle between carousel and list view
-  $('#toggle-slider').on('click', function() {
-    $('.testimonial-carousel').toggle();  // Toggle carousel visibility
-    $('.testimonial-list').toggle();      // Toggle list view visibility
+  // Set initial visibility
+  $('.testimonial-carousel').show();
 
-    // Change button text based on the current view
+  $('#toggle-slider').on('click', function() {
+    $('.testimonial-carousel').toggle();
+    $('.testimonial-list').toggle();
     if ($('.testimonial-carousel').is(':visible')) {
       $(this).text('Switch to List View');
     } else {
@@ -572,6 +601,21 @@ $(document).ready(function(){
     }
   });
 });
+// Only do this on carousel view
+function setCarouselHeight() {
+  const cards = document.querySelectorAll('.testimonial-carousel .testimonial-card');
+  const carousel = document.querySelector('.testimonial-carousel');
+
+  if (cards.length >= 3) {
+    const totalHeight = cards[0].offsetHeight + cards[1].offsetHeight + cards[2].offsetHeight;
+    carousel.style.maxHeight = `${totalHeight}px`;
+  }
+}
+
+
+
+
+
    // Show back-to-top button when scrolling down
   window.addEventListener('scroll', function () {
     const backToTop = document.getElementById('backToTop');
