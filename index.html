@@ -382,6 +382,35 @@ footer a:focus {
     #backToTop:hover {
       background-color: #005c99;
     }
+    @media (max-width: 600px) {
+  .parallax-content h1,
+  .parallax-content h2,
+  .parallax-content p1,
+  .parallax-content p,
+  .parallax-content j,
+  .project-content p {
+    font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem) !important;
+    line-height: 1.4;
+    padding: 0 1rem;
+    word-break: break-word;
+  }
+
+  .intro-note,
+  .project-content {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul li {
+    margin: 0.25rem 0;
+  }
+}
+
   </style>
   
 <body>
@@ -571,6 +600,35 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
   flex-direction: column;
   gap: 1.5rem;
 }
+@media (max-width: 600px) {
+  .parallax-content h1,
+  .parallax-content h2,
+  .parallax-content p1,
+  .parallax-content p,
+  .parallax-content j,
+  .project-content p {
+    font-size: clamp(1.25rem, 4vw + 0.5rem, 2rem) !important;
+    line-height: 1.4;
+    padding: 0 1rem;
+    word-break: break-word;
+  }
+
+  .intro-note,
+  .project-content {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul li {
+    margin: 0.25rem 0;
+  }
+}
+
 </style>
 
 
