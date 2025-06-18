@@ -912,6 +912,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+<script>
+  // Disable autoplay for videos on mobile devices (width ≤ 768px)
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+      const videos = document.querySelectorAll("video[autoplay]");
+      videos.forEach(video => {
+        video.removeAttribute("autoplay");
+        video.pause(); // ensure it doesn't play automatically
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
