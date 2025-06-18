@@ -258,11 +258,64 @@ h1.main-title {
   margin: 0 0.5rem;
   text-align: center;
 }
+
+/* ===== Centered Mobile Dropdown Nav ===== */
+@media (max-width: 768px) {
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #simpleMenuToggle {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;              /* Hidden until toggle */
+    flex-direction: column;
+    width: 100%;
+    background-color: #007acc;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Hide Menu button on larger screens */
+@media (min-width: 769px) {
+  #simpleMenuToggle { display: none; }
+}
+
 </style>
 </head>
 
 <body>
   <nav>
+      <button id="simpleMenuToggle">Menu ⌄</button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -843,6 +896,19 @@ $(document).ready(function(){
   window.onscroll = function() {
     document.getElementById('backToTop').style.display = (window.scrollY > 300) ? 'block' : 'none';
   };
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('simpleMenuToggle');
+  const navList = document.querySelector('nav ul');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      navList.classList.toggle('show');
+    });
+  }
 });
 </script>
 

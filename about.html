@@ -220,12 +220,61 @@ h1.main-title {
   margin: 0 0.5rem;
   text-align: center;
 }
+
+/* ==== Mobile dropdown nav (simple) ==== */
+@media (max-width: 768px) {
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #simpleMenuToggle {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    cursor: pointer;
+  }
+  nav ul {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    padding: 0.5rem 0;
+    z-index: 999;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+@media (min-width: 769px) {
+  #simpleMenuToggle { display: none; }
+}
+
+
 </style>
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 </head>
 <body>
   <nav>
+      <button id="simpleMenuToggle">Menu ⌄</button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -276,6 +325,19 @@ $(document).ready(function(){
   window.onscroll = function() {
     document.getElementById('backToTop').style.display = (window.scrollY > 300) ? 'block' : 'none';
   };
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.getElementById('simpleMenuToggle');
+  const navList = document.querySelector('nav ul');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      navList.classList.toggle('show');
+    });
+  }
 });
 </script>
 
