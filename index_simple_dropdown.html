@@ -382,7 +382,8 @@ footer a:focus {
     #backToTop:hover {
       background-color: #005c99;
     }
-    @media (max-width: 600px) {
+  
+@media (max-width: 600px) {
   .parallax-content h1,
   .parallax-content h2,
   .parallax-content p1,
@@ -467,7 +468,6 @@ footer a:focus {
 }
 
 /* Hide hamburger on large screens */
-/* Hide hamburger on large screens */
 @media (min-width: 769px) {
   .menu-toggle {
     display: none;
@@ -532,11 +532,11 @@ footer a:focus {
   }
 }
 
-  </style>
+</style>
   
 <body>
   <nav>
-     <button id="simpleMenuToggle" style="background:#007acc;color:white;border:none;font-size:1.25rem;padding:0.5rem 1rem;margin:0.5rem auto;display:block;">Menu ⌄</button>
+  <button id="simpleMenuToggle" style="background:#007acc;color:white;border:none;font-size:1.25rem;padding:0.5rem 1rem;margin:0.5rem auto;display:block;">Menu ⌄</button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -722,6 +722,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
   flex-direction: column;
   gap: 1.5rem;
 }
+
 @media (max-width: 600px) {
   .parallax-content h1,
   .parallax-content h2,
@@ -750,6 +751,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
     margin: 0.25rem 0;
   }
 }
+
 
 /* --- Mobile-specific fixes --- */
 @media (max-width: 768px) {
@@ -812,6 +814,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
   }
 }
 
+
 /* ===== Mobile Navigation Dropdown ===== */
 @media (max-width: 768px) {
   nav {
@@ -868,6 +871,7 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
     display: none;
   }
 }
+
 </style>
 
 
@@ -939,7 +943,7 @@ function setCarouselHeight() {
     // When the button is clicked, smoothly scroll back to the top
     document.getElementById("backToTop").addEventListener("click", function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
+    });
 </script>
 
 
@@ -1063,6 +1067,7 @@ function setCarouselHeight() {
   }
 }
 
+
 /* ===== Mobile Navigation Dropdown ===== */
 @media (max-width: 768px) {
   nav {
@@ -1137,8 +1142,10 @@ document.addEventListener("DOMContentLoaded", function () {
       navList.classList.remove("show");
     });
   });
-    });
+});
 </script>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('simpleMenuToggle');
