@@ -467,6 +467,65 @@ footer a:focus {
 }
 
 /* Hide hamburger on large screens */
+/* Hide hamburger on large screens */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
+/* ===== Mobile Navigation Dropdown ===== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+  }
+
+  .menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+
+  nav ul {
+    display: none;          /* Hidden until toggled */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    padding: 0.5rem 0;
+    margin: 0;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Hide menu-toggle on desktop */
 @media (min-width: 769px) {
   .menu-toggle {
     display: none;
@@ -752,7 +811,62 @@ Over time, I’ve built a reputation as someone who gets things done, with preci
   }
 }
 
+/* ===== Mobile Navigation Dropdown ===== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+  }
 
+  .menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+
+  nav ul {
+    display: none;          /* Hidden until toggled */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    padding: 0.5rem 0;
+    margin: 0;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Hide menu-toggle on desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 </style>
 
 
@@ -947,6 +1061,64 @@ function setCarouselHeight() {
     display: none;
   }
 }
+
+/* ===== Mobile Navigation Dropdown ===== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+  }
+
+  .menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+
+  nav ul {
+    display: none;          /* Hidden until toggled */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007acc;
+    padding: 0.5rem 0;
+    margin: 0;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Hide menu-toggle on desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 </style>
 
 <script>
@@ -965,6 +1137,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
     });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('menuToggle');
+  const navList = document.querySelector('nav ul');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      navList.classList.toggle('show');
+    });
+  }
+});
 </script>
 
 </body>
